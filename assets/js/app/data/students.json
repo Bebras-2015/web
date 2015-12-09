@@ -1,0 +1,33 @@
+[
+  {
+    "id": 1,
+    "full_name": "Moksleivis 1",
+    "grader": 1,
+    "score": 1
+  },
+  {
+    "id": 2,
+    "full_name": "Moksleivis 2",
+    "grader": 2,
+    "score": 2
+  },
+  {
+    "id": 3,
+    "full_name": "Moksleivis 3",
+    "grader": 3,
+    "school": "Dvarionio",
+    "score": 3
+  },
+  {
+    "id": 4,
+    "full_name": "Moksleivis 4",
+    "grader": 4,
+    "score": 4
+  },
+  {
+    "id": 5,
+    "full_name": "Moksleivis 5",
+    "grader": 5,
+    "score": 5
+  }
+]

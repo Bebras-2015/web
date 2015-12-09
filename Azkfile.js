@@ -10,13 +10,13 @@ systems({
     image: {"docker": "azukiapp/php-fpm:5.6"},
     // Steps to execute before running instances
     provision: [
-      "npm install -g grunt-cli && npm install -g bower && bower install --allow-root && npm install && grunt"
+      "npm install -g bower && bower install --allow-root"
     ],
     workdir: "/azk/#{manifest.dir}",
     shell: "/bin/bash",
     wait: 20,
     mounts: {
-      '/azk/#{manifest.dir}': sync(".")
+      '/azk/#{manifest.dir}': path(".")
     },
     scalable: {"default": 1},
     http: {
@@ -24,13 +24,13 @@ systems({
     },
     ports: {
       // exports global variables
-      http: "80/tcp",
+      http: "80/tcp"
     },
     envs: {
       // Make sure that the PORT value is the same as the one
       // in ports/http below, and that it's also the same
       // if you're setting it in a .env file
-      APP_DIR: "/azk/#{manifest.dir}",
-    },
-  },
+      APP_DIR: "/azk/#{manifest.dir}"
+    }
+  }
 });

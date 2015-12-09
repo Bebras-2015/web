@@ -10,12 +10,12 @@ myApp.config([
         $locationProvider.hashPrefix('!');
         $routeProvider
             .when('/', {
-                templateUrl: "app/view/testCtr.html",
-                controller: 'testCtrl'
+                templateUrl: "views/students.html",
+                controller: 'studentsCtrl'
             })
-            .when('/contact', {
-                templateUrl: "app/view/testCtr.html",
-                controller: 'testCtrl'
+            .when('/student/:id', {
+                templateUrl: "views/student.html",
+                controller: 'studentCtrl'
             })
             .otherwise({
                 redirectTo: '/'
