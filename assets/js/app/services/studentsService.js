@@ -34,34 +34,34 @@ myApp.service('studentsService', [function () {
         set score(val) {
             switch (val) {
                 case 1:
-                    score = '❶';
+                    score = '➊';
                     break;
                 case 2:
-                    score = '❷';
+                    score = '➋';
                     break;
                 case 3:
-                    score = '❸';
+                    score = '➌';
                     break;
                 case 4:
-                    score = '❹';
+                    score = '➍';
                     break;
                 case 5:
-                    score = '❺';
+                    score = '➎';
                     break;
                 case 6:
-                    score = '❻';
+                    score = '➏';
                     break;
                 case 7:
-                    score = '❼';
+                    score = '➐';
                     break;
                 case 8:
-                    score = '❽';
+                    score = '➑';
                     break;
                 case 9:
-                    score = '❾';
+                    score = '➒';
                     break;
                 case 10:
-                    score = '❿';
+                    score = '➓';
                     break;
                 default:
                     score = '★ ' + val;
