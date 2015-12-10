@@ -6,8 +6,9 @@ myApp.controller('studentsCtrl', [
         // Get Users
         studentsRes.fetch().$promise.then(
             function (data) {
-                //$scope.students.list = data;
-                //userService.name = lodash.first(data).full_name;
+                // Clear the list
+                $scope.student.list = [];
+
                 angular.forEach(data, function(value, key) {
 
                     // Prepare name
