@@ -1,20 +1,20 @@
 # What todo
 
 ### Servisai
-* Servisa visiem studentams gauti
-* Servisa vienam studentui gauti (konkreciam)
+- [x] Servisa visiem studentams gauti
+- [ ] Servisa vienam studentui gauti (konkreciam)
 
 ### Views
-* Listas visu studentu
-* Details
+- [x] Listas visu studentu
+- [ ] Details
 
 ### Pages
-* Apie bebra
-* Apie NFQ
-* Komanda
+- [ ] Apie bebra
+- [ ] Apie NFQ
+- [ ] Komanda
 
 ### Design elements
-* Logo
-* Meniu
-* Footer
-* Landing (titulinis)
+- [ ] Logo
+- [ ] Meniu
+- [ ] Footer
+- [ ] Landing (titulinis)
