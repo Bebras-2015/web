@@ -17,6 +17,14 @@ myApp.config([
                 templateUrl: "views/student.html",
                 controller: 'studentCtrl'
             })
+            .when('/about', {
+                templateUrl: "views/about.html",
+                controller: 'aboutCtrl'
+            })
+            .when('/nfq', {
+                templateUrl: "views/nfq.html",
+                controller: 'nfqCtrl'
+            })
             .otherwise({
                 redirectTo: '/'
             });

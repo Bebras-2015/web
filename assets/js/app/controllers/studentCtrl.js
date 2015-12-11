@@ -1,7 +1,7 @@
 myApp.controller('studentCtrl', [
-    '$scope', 'studentsService', 'studentRes', 'lodash', '$routeParams',
-    function ($scope, studentsService, studentRes, lodash, $routeParams) {
-
+    '$scope', 'studentsService', 'studentRes', 'lodash', '$routeParams', '$rootScope',
+    function ($scope, studentsService, studentRes, lodash, $routeParams, $rootScope) {
+        $rootScope.page = 'home';
         $scope.student = studentsService;
         // Get Users
         studentRes.fetch({id:$routeParams.id}).$promise.then(
