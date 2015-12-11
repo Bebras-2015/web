@@ -1,10 +1,10 @@
 myApp.controller('studentCtrl', [
-    '$scope', 'studentsService', 'studentRes', 'lodash',
-    function ($scope, studentsService, studentsRes, lodash) {
+    '$scope', 'studentsService', 'studentRes', 'lodash', '$routeParams',
+    function ($scope, studentsService, studentRes, lodash, $routeParams) {
 
         $scope.student = studentsService;
         // Get Users
-        studentsRes.fetch().$promise.then(
+        studentRes.fetch({id:$routeParams.id}).$promise.then(
             function (data) {
                 //$scope.students.list = data;
                 //userService.name = lodash.first(data).full_name;

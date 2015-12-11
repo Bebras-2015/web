@@ -1,3 +1,5 @@
+<input type="text" ng-model="search.$" ng-model-options="{ debounce: 150 }" class="form-control" placeholder="Search for">
+
 <div class="table-responsive">
     <table class="table table-striped">
         <thead>
@@ -9,11 +11,14 @@
             </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="student in student.list">
-                <td>{{ student.grader }}</td>
+            <tr ng-repeat="student in total = (student.list | filter:search)">
+                <td>{{total.length}}{{ student.grader }}</td>
                 <td><a ng-href="/student/{{ student.id }}">{{ student.name }}</a></td>
                 <td>{{ student.school }}</td>
-                <td>{{ student.score }}</td>
+                <td class="text-warning">{{ student.score }}</td>
+            </tr>
+            <tr>
+                <td ng-if="!total.length" colspan="4">No results...</td>
             </tr>
         </tbody>
     </table>
