@@ -4,6 +4,7 @@
 - [x] Servisa visiem studentams gauti
 - [ ] Servisa vienam studentui gauti (konkreciam)
 - [ ] Paieska
+- [ ] Sortinimas
 
 ### Views
 - [x] Listas visu studentu
