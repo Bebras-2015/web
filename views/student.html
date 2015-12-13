@@ -1,4 +1,12 @@
+
 <div class="table-responsive">
+    {{ stats.grader }} AND {{ stats.school }}
+
+    <canvas id="line" class="chart chart-line" data-chart-data="data"
+            data-chart-labels="labels" data-chart-legend="true" data-chart-series="series"
+            data-chart-click="onClick" >
+    </canvas>
+
     <table class="table table-striped">
         <thead>
             <tr>

@@ -23,7 +23,7 @@ azk shell web
 ```
 Install additional applications
 ```
-npm install -g grunt-cli && npm install -g bower && bower install --allow-root && npm install && grunt
+npm install -g bower && bower install --allow-root
 ```
 Execute bower | grunt | npm | composer
 ```

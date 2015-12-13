@@ -6,6 +6,8 @@
     "jQuery": "~2.1.4",
     "angular-resource": "~1.4.8",
     "ng-lodash": "~0.3.0",
-    "angular-route": "~1.4.8"
+    "angular-route": "~1.4.8",
+    "angular-chart.js": "~0.8.8",
+    "Chart.js": "~1.0.2"
   }
 }
