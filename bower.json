@@ -8,6 +8,7 @@
     "ng-lodash": "~0.3.0",
     "angular-route": "~1.4.8",
     "angular-chart.js": "~0.8.8",
-    "Chart.js": "~1.0.2"
+    "Chart.js": "~1.0.2",
+    "angular-loading-bar": "~0.8.0"
   }
 }
