@@ -25,10 +25,6 @@ Install additional applications
 ```
 npm install -g bower && bower install --allow-root
 ```
-Execute bower | grunt | npm | composer
-```
-azk shell grunt watch
-```
 Open browser
 ```
 http://web.dev.azk.io
