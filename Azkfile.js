@@ -16,7 +16,8 @@ systems({
     shell: "/bin/bash",
     wait: 20,
     mounts: {
-      '/azk/#{manifest.dir}': path(".")
+      '/azk/#{manifest.dir}': path("."),
+      '/etc/nginx/sites-enabled/': path("./nginx/")
     },
     scalable: {"default": 1},
     http: {
