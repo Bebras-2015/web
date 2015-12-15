@@ -10,14 +10,17 @@ systems({
     image: {"docker": "azukiapp/php-fpm:5.6"},
     // Steps to execute before running instances
     provision: [
-      "npm install -g bower && bower install --allow-root"
+      "npm install bower",
+      "node_modules/.bin/bower install --allow-root",
     ],
     workdir: "/azk/#{manifest.dir}",
     shell: "/bin/bash",
     wait: 20,
     mounts: {
-      '/azk/#{manifest.dir}': path("."),
-      '/etc/nginx/sites-enabled/': path("./nginx/")
+      '/azk/#{manifest.dir}'             : path("."),
+      '/etc/nginx/sites-enabled/'        : path("./nginx/"),
+      '/azk/#{manifest.dir}/lib'         : persistent("lib"),
+      '/azk/#{manifest.dir}/node_modules': persistent("node_modules"),
     },
     scalable: {"default": 1},
     http: {
