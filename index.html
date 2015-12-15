@@ -8,13 +8,55 @@
         <link rel="stylesheet" href="lib/angular/angular-csp.css">
         <link rel="stylesheet" href="lib/angular-chart.js/dist/angular-chart.min.css">
         <link rel="stylesheet" href="lib/angular-loading-bar/build/loading-bar.min.css">
+        <link rel="stylesheet" href="assets/css/animate.css">
         <link rel="stylesheet" href="assets/css/main.css">
+        <link rel="stylesheet" href="assets/css/home.css">
+
+        <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700,300,900&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <base href="/">
     </head>
     <body ng-app="myApp">
         <loading><div></div></loading>
-        <nav class="navbar navbar-inverse navbar-fixed-top">
+
+        <!--<div class="container home">-->
+            <!--<div class="row">-->
+                <!--<div class="menu col-xs-12 col-sm-6 col-md-5 col-lg-4 text-center">-->
+
+                    <!--<div class="logo">-->
+                        <!--<span class="animated ani ani-0 hidden">-->
+                            <!--<img class="animated infinite bounce" src="assets/img/nfq.png" alt="">-->
+                        <!--</span>-->
+                        <!--<h4 class="animated ani ani-1 hidden"><strong>PRISTATO</strong></h4>-->
+                    <!--</div>-->
+                    <!--<div class="div animated ani ani-2 hidden"></div>-->
+                    <!--<h2 class="animated ani ani-3 hidden">KONKURSAS</h2>-->
+                    <!--<h1 class=" animated ani ani-4 hidden">"BEBRAS"</h1>-->
+                    <!--<div class="buttons row">-->
+                        <!--<div class="col-xs-12">-->
+                            <!--<div class="button">-->
+                                <!--<a class="animated ani ani-5 hidden" href="nfq">APIE NFQ</a>-->
+                            <!--</div>-->
+                            <!--<div class="button">-->
+                                <!--<a class="animated ani ani-6 hidden" href="about">APIE BEBRĄ</a>-->
+                            <!--</div>-->
+                            <!--<div class="button">-->
+                                <!--<a class="animated ani ani-7 hidden" href="/">REZULTATAI</a>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+
+                <!--</div>-->
+                <!--<img class="beaver animated slideInUp" src="assets/img/beaver.png" alt="">-->
+            <!--</div>-->
+        <!--</div>-->
+
+
+
+
+
+        <nav class="navbar navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -23,18 +65,20 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="/">Project name</a>
+                    <strong>
+                        <a class="navbar-brand" href="/">"BEBRAS"</a>
+                    </strong>
                 </div>
                 <div id="navbar" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li ng-class="{'active': page == 'home'}">
-                            <a href="/">Home</a>
+                        <li ng-class="{'active': page == 'nfq'}">
+                            <a href="nfq">APIE NFQ</a>
                         </li>
                         <li ng-class="{'active': page == 'about'}">
-                            <a href="about">About</a>
+                            <a href="about">APIE BEBRĄ </a>
                         </li>
-                        <li ng-class="{'active': page == 'nfq'}">
-                            <a href="nfq">Apie NFQ</a>
+                        <li ng-class="{'active': page == 'home'}">
+                            <a href="/">REZULTATAI</a>
                         </li>
                     </ul>
                 </div>
@@ -42,16 +86,11 @@
             </div>
         </nav>
         <div class="container">
-            <h1>Labas bebre</h1>
-            <p class="lead">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos odio, quam voluptatem eum, ipsam quia quisquam
-        excepturi aliquam saepe quibusdam illo, natus rem tempore molestias aut voluptates id omnis beatae.</p>
-            <h2>Test</h2>
-            <div class="wrapper">
                 <div ng-view=""></div>
             </div>
         </div>
         <footer class="pg-empty-placeholder"></footer>
+
         <script src="lib/angular/angular.min.js"></script>
         <script src="lib/angular-resource/angular-resource.min.js"></script>
         <script src="lib/angular-route/angular-route.min.js"></script>
@@ -71,5 +110,6 @@
         <script src="assets/js/app/factories/statsResFactory.js"></script>
         <script src="assets/js/app/controllers/nfqCtrl.js"></script>
         <script src="assets/js/app/controllers/aboutCtrl.js"></script>
+        <script src="assets/js/app/main.js"></script>
     </body>
 </html>

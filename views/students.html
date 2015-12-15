@@ -1,4 +1,11 @@
-<input type="text" ng-model="search.$" ng-model-options="{ debounce: 150 }" class="form-control" placeholder="Search for">
+<h1 class="title">
+    <span class="pull-left animated infinite pulse">
+        REZULTATAI
+    </span>
+</h1>
+<div class="div"></div>
+
+<input type="text" ng-model="search.$" ng-model-options="{ debounce: 150 }" placeholder="Ieskoti...">
 
 <div class="table-responsive">
     <table class="table table-striped">
@@ -15,7 +22,7 @@
                 <td>{{total.length}}{{ student.grader }}</td>
                 <td><a ng-href="/student/{{ student.id }}">{{ student.name }}</a></td>
                 <td>{{ student.school }}</td>
-                <td class="text-warning">{{ student.score }}</td>
+                <td class="score">{{ student.score }}</td>
             </tr>
             <tr>
                 <td ng-if="!total.length" colspan="4">No results...</td>

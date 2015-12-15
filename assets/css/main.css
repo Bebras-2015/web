@@ -1,7 +1,92 @@
 body {
   padding-top: 70px;
+  font-family: 'Titillium Web', sans-serif;
+  background-image: url(../img/bg.jpg);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: cover;
+}
+a, a:hover, a:focus {
+  color: #A70522;
 }
 .progress {
   margin-top: -20px;
   margin-bottom: 0;
+}
+.navbar {
+  background: #A70522;
+  color: white;
+}
+.navbar a, .navbar a:focus, .navbar a:hover {
+  color: white;
+}
+.navbar-nav a {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.navbar-nav a:hover, .navbar-nav a:focus {
+  background: #750418 !important;
+}
+.navbar-header .icon-bar {
+  background-color: white;
+}
+.title {
+  width: 100%;
+  float: left;
+  color: #A70522;
+  font-weight: 900;
+}
+.div {
+  float: left;
+  width: 100px;
+  height: 5px;
+  background: #A70522;
+  margin: 10px 0 20px;
+}
+input, textarea {
+  display: block;
+  width: 100%;
+  height: 54px;
+  margin-bottom: 20px;
+  padding: 16px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 2px solid #A70522;
+}
+.table-responsive {
+  border: 2px solid #A70522;
+}
+.table {
+  background: white;
+  font-size: 16px;
+  margin-bottom: 0;
+}
+.table a {
+  font-weight: 500;
+}
+.table .score {
+  color: #A70522;
+}
+thead {
+  text-transform: uppercase;
+  background-color: #A70522;
+  color: white;
+}
+thead th {
+  border-right: 2px solid white;
+}
+thead th:last-child {
+  border-right: none;
+}
+.text-content {
+  float : left;
+  width: 100%;
+  background: white;
+  padding: 2rem;
+  border: 5px solid #A70522;
+  margin-bottom: 20px;
+  font-size: 16px;
 }
