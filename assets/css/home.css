@@ -1,0 +1,93 @@
+html {
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.home-body {
+    height: 100%;
+    width: 100%;
+    padding-top: 0;
+    overflow: hidden;
+    border-top: 20px solid #A70522;
+    border-bottom: 20px solid #A70522;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+.home .div {
+    display: inline-block;
+    width: 40%;
+    height: 5px;
+    background: #A70522;
+}
+
+.home .menu {
+    margin-top: 10%;
+    color: #A70522;
+}
+.home .menu h1 {
+    margin-bottom: 2rem;
+    font-size: 72px;
+    font-weight: 900;
+}
+.home .menu h2 {
+    font-size: 40px;
+    font-weight: 600;
+}
+.home .menu .logo {
+    width: 100%;
+    text-align: center;
+}
+.home .menu .logo img {
+    width: 80px;
+    margin-bottom: 10px;
+}
+.home .menu .logo h4 {
+    margin: 0;
+}
+.home .menu .button {
+    margin: 1.5rem 0;
+}
+.home .menu .button a {
+    width: 210px;
+    display: inline-block;
+    padding: 2rem 1rem;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    background: #A70522;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.home .menu .button a:hover, .home .menu .button a:focus {
+    color: white;
+    text-decoration: none;
+    background: #750418;
+}
+
+.home .beaver {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+@media screen and (max-width: 700px) {
+    .home .menu h1 {
+        font-size: 58px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container.home {
+        width: 1570px;
+    }
+}
