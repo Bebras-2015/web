@@ -87,3 +87,8 @@ thead th:last-child {
   margin-bottom: 20px;
   font-size: 16px;
 }
+.content-image {
+  margin-top: 25px;
+  width: 100%;
+  height: auto;
+}
