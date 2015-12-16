@@ -1,9 +1,7 @@
 body {
   padding-top: 70px;
   font-family: 'Titillium Web', sans-serif;
-  background-image: url(../img/bg.jpg);
-  background-repeat: no-repeat;
-  background-position: left bottom;
+  background: url(../img/bg.jpg) no-repeat left bottom;
   background-size: cover;
 }
 a, a:hover, a:focus {
@@ -24,8 +22,8 @@ a, a:hover, a:focus {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-.navbar-nav a:hover, .navbar-nav a:focus {
-  background: #750418 !important;
+.nav>li>a:focus, .nav>li>a:hover, .nav>li.active {
+  background-color: #750418;
 }
 .navbar-header .icon-bar {
   background-color: white;
@@ -52,8 +50,7 @@ input, textarea {
   font-size: 14px;
   line-height: 1.42857143;
   color: #555;
-  background-color: #fff;
-  background-image: none;
+  background: #fff none;
   border: 2px solid #A70522;
 }
 .table-responsive {

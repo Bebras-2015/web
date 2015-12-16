@@ -1,0 +1,45 @@
+<!--TODO: Homepage-->
+<div class="container home">
+    <div class="row">
+        <div class="menu col-xs-12 col-sm-6 col-md-5 col-lg-4 text-center">
+
+            <div class="logo">
+                <span class="animated ani ani-0 hidden">
+                    <img class="animated infinite bounce" src="assets/img/nfq.png" alt="">
+                </span>
+                <h4 class="animated ani ani-1 hidden"><strong>PRISTATO</strong></h4>
+            </div>
+            <div class="div animated ani ani-2 hidden"></div>
+            <h2 class="animated ani ani-3 hidden">KONKURSAS</h2>
+
+            <h1 class=" animated ani ani-4 hidden">"BEBRAS"</h1>
+
+            <div class="buttons row">
+                <div class="col-xs-12">
+                    <div class="button">
+                        <a class="animated ani ani-5 hidden" href="nfq">APIE NFQ</a>
+                    </div>
+                    <div class="button">
+                        <a class="animated ani ani-6 hidden" href="about">APIE BEBRĄ</a>
+                    </div>
+                    <div class="button">
+                        <a class="animated ani ani-7 hidden" href="/">REZULTATAI</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <img class="beaver animated slideInUp" src="assets/img/beaver.png" alt="">
+    </div>
+</div>
+
+<script>
+    $(function(){
+        $('.ani').each(function(i,el) {
+            var $this = $(this);
+            setTimeout(function() {
+                $this.addClass('flipInX').removeClass('hidden');
+            }, i * 100);
+        });
+    })();
+</script>

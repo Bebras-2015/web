@@ -19,11 +19,7 @@ azk start
 ```
 Connect to containers shell
 ```
-azk shell web
-```
-Install additional applications
-```
-npm install -g bower && bower install --allow-root
+azk shell
 ```
 Open browser
 ```

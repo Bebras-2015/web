@@ -3,14 +3,13 @@
     <head>
         <meta charset="UTF-8">
         <title>Bebras 2015</title>
-        <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap-theme.css">
-        <link rel="stylesheet" href="lib/angular/angular-csp.css">
-        <link rel="stylesheet" href="lib/angular-chart.js/dist/angular-chart.min.css">
-        <link rel="stylesheet" href="lib/angular-loading-bar/build/loading-bar.min.css">
-        <link rel="stylesheet" href="assets/css/animate.css">
-        <link rel="stylesheet" href="assets/css/main.css">
-        <link rel="stylesheet" href="assets/css/home.css">
+        <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap-theme.css">
+        <link rel="stylesheet" href="/lib/angular/angular-csp.css">
+        <link rel="stylesheet" href="/lib/angular-loading-bar/build/loading-bar.min.css">
+        <link rel="stylesheet" href="/assets/css/animate.css">
+        <link rel="stylesheet" href="/assets/css/main.css">
+        <link rel="stylesheet" href="/assets/css/home.css">
 
         <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700,300,900&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
@@ -18,41 +17,8 @@
         <base href="/">
     </head>
     <!--TODO: Homepage -> Add class "home-body"-->
-    <body ng-app="myApp">
+    <body ng-app="myApp" ng-class="{'home-body':page=='home'}">
         <loading><div></div></loading>
-
-        <!--TODO: Homepage-->
-        <!--<div class="container home">-->
-            <!--<div class="row">-->
-                <!--<div class="menu col-xs-12 col-sm-6 col-md-5 col-lg-4 text-center">-->
-
-                    <!--<div class="logo">-->
-                        <!--<span class="animated ani ani-0 hidden">-->
-                            <!--<img class="animated infinite bounce" src="assets/img/nfq.png" alt="">-->
-                        <!--</span>-->
-                        <!--<h4 class="animated ani ani-1 hidden"><strong>PRISTATO</strong></h4>-->
-                    <!--</div>-->
-                    <!--<div class="div animated ani ani-2 hidden"></div>-->
-                    <!--<h2 class="animated ani ani-3 hidden">KONKURSAS</h2>-->
-                    <!--<h1 class=" animated ani ani-4 hidden">"BEBRAS"</h1>-->
-                    <!--<div class="buttons row">-->
-                        <!--<div class="col-xs-12">-->
-                            <!--<div class="button">-->
-                                <!--<a class="animated ani ani-5 hidden" href="nfq">APIE NFQ</a>-->
-                            <!--</div>-->
-                            <!--<div class="button">-->
-                                <!--<a class="animated ani ani-6 hidden" href="about">APIE BEBRĄ</a>-->
-                            <!--</div>-->
-                            <!--<div class="button">-->
-                                <!--<a class="animated ani ani-7 hidden" href="/">REZULTATAI</a>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</div>-->
-
-                <!--</div>-->
-                <!--<img class="beaver animated slideInUp" src="assets/img/beaver.png" alt="">-->
-            <!--</div>-->
-        <!--</div>-->
 
         <nav class="navbar navbar-fixed-top">
             <div class="container">
@@ -70,13 +36,13 @@
                 <div id="navbar" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li ng-class="{'active': page == 'nfq'}">
-                            <a href="nfq">APIE NFQ</a>
+                            <a href="/nfq">APIE NFQ</a>
                         </li>
                         <li ng-class="{'active': page == 'about'}">
-                            <a href="about">APIE BEBRĄ </a>
+                            <a href="/about">APIE BEBRĄ </a>
                         </li>
-                        <li ng-class="{'active': page == 'home'}">
-                            <a href="/">REZULTATAI</a>
+                        <li ng-class="{'active': page == 'results'}">
+                            <a href="/results">REZULTATAI</a>
                         </li>
                     </ul>
                 </div>
@@ -86,27 +52,27 @@
         <div class="container">
             <div ng-view=""></div>
         </div>
-        <footer class="pg-empty-placeholder"></footer>
+        <footer class="pg-empty-placeholder" ng-if="page!='home'">
+            Footer goes here
+        </footer>
 
-        <script src="lib/angular/angular.min.js"></script>
-        <script src="lib/angular-resource/angular-resource.min.js"></script>
-        <script src="lib/angular-route/angular-route.min.js"></script>
-        <script src="lib/ng-lodash/build/ng-lodash.min.js"></script>
-        <script src="lib/jQuery/dist/jquery.min.js"></script>
-        <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
-        <script src="lib/Chart.js/Chart.min.js"></script>
-        <script src="lib/angular-chart.js/dist/angular-chart.min.js"></script>
-        <script src="lib/angular-loading-bar/build/loading-bar.js"></script>
-        <script src="assets/js/app/app.js"></script>
-        <script src="assets/js/app/controllers/studentCtrl.js"></script>
-        <script src="assets/js/app/controllers/studentsCtrl.js"></script>
-        <script src="assets/js/app/services/studentsService.js"></script>
-        <script src="assets/js/app/services/statsService.js"></script>
-        <script src="assets/js/app/factories/studentResFactory.js"></script>
-        <script src="assets/js/app/factories/studentsResFactory.js"></script>
-        <script src="assets/js/app/factories/statsResFactory.js"></script>
-        <script src="assets/js/app/controllers/nfqCtrl.js"></script>
-        <script src="assets/js/app/controllers/aboutCtrl.js"></script>
-        <script src="assets/js/app/main.js"></script>
+        <script src="/lib/angular/angular.min.js"></script>
+        <script src="/lib/angular-resource/angular-resource.min.js"></script>
+        <script src="/lib/angular-route/angular-route.min.js"></script>
+        <script src="/lib/ng-lodash/build/ng-lodash.min.js"></script>
+        <script src="/lib/jQuery/dist/jquery.min.js"></script>
+        <script src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="/lib/angular-loading-bar/build/loading-bar.js"></script>
+        <script src="/lib/angular-google-chart/ng-google-chart.min.js"></script>
+        <script src="/assets/js/app/app.js"></script>
+        <script src="/assets/js/app/controllers/studentCtrl.js"></script>
+        <script src="/assets/js/app/controllers/studentsCtrl.js"></script>
+        <script src="/assets/js/app/services/studentsService.js"></script>
+        <script src="/assets/js/app/services/statsService.js"></script>
+        <script src="/assets/js/app/factories/studentResFactory.js"></script>
+        <script src="/assets/js/app/factories/studesdntResFactory.js"></script>
+        <script src="/assets/js/app/factories/studentsResFactory.js"></script>
+        <script src="/assets/js/app/factories/statsResFactory.js"></script>
+        <script src="/assets/js/app/controllers/homeCtrl.js"></script>
     </body>
 </html>

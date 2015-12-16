@@ -1,16 +1,30 @@
 myApp.controller('studentCtrl', [
     '$scope', 'studentsService', 'studentRes', 'lodash', '$routeParams', '$rootScope', 'statsResFactory', 'statsService',
     function ($scope, studentsService, studentRes, lodash, $routeParams, $rootScope, statsResFactory, statsService) {
-        $rootScope.page = 'home';
+        $rootScope.page = 'student';
         $scope.student = studentsService;
         $scope.stats = statsService;
 
-        $scope.labels = ["Jonas", "Petras", "March", "April", "May", "June", "July"];
-        $scope.series = ['Grader', 'School'];
-        $scope.data = [
-            [65, 59, 80, 81, 56, 55, 40],
-            [28, 48, 40, 19, 86, 27, 90]
+        $scope.chartObject = {};
+        $scope.chartObject.type = "Gauge";
+
+        $scope.chartObject.options = {
+            width: 400,
+            height: 120,
+            redFrom: 90,
+            redTo: 100,
+            yellowFrom: 75,
+            yellowTo: 90,
+            minorTicks: 5
+        };
+
+        $scope.chartObject.data = [
+            ['Label', 'Value'],
+            ['Memory', 80],
+            ['CPU', 55],
+            ['Network', 68]
         ];
+
         $scope.onClick = function (points, evt) {
             console.log(points, evt);
         };

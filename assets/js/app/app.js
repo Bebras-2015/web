@@ -1,4 +1,4 @@
-var myApp = angular.module('myApp', ['ngResource', 'ngLodash', 'ngRoute', 'chart.js', 'angular-loading-bar']);
+var myApp = angular.module('myApp', ['ngResource', 'ngLodash', 'ngRoute', 'angular-loading-bar', 'googlechart']);
 
 myApp.config([
     '$routeProvider', '$locationProvider', 'cfpLoadingBarProvider',
@@ -18,6 +18,10 @@ myApp.config([
         $locationProvider.hashPrefix('!');
         $routeProvider
             .when('/', {
+                templateUrl: "views/home.html",
+                controller: 'homeCtrl'
+            })
+            .when('/results', {
                 templateUrl: "views/students.html",
                 controller: 'studentsCtrl'
             })
@@ -27,11 +31,19 @@ myApp.config([
             })
             .when('/about', {
                 templateUrl: "views/about.html",
-                controller: 'aboutCtrl'
+                resolve: {
+                    required: function ($rootScope) {
+                        $rootScope.page = 'about';
+                    }
+                }
             })
             .when('/nfq', {
                 templateUrl: "views/nfq.html",
-                controller: 'nfqCtrl'
+                resolve: {
+                    required: function ($rootScope) {
+                        $rootScope.page = 'nfq';
+                    }
+                }
             })
             .otherwise({
                 redirectTo: '/'
