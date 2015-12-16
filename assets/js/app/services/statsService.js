@@ -8,7 +8,7 @@ myApp.service('statsService', [function () {
         data: [],
         // Set Get grader stats
         get grader() {
-            return grader + '%';
+            return grader;
         },
         set grader(val) {
             grader = val;
@@ -16,7 +16,7 @@ myApp.service('statsService', [function () {
 
         // Set get school stats
         get school() {
-            return school + '%';
+            return school;
         },
         set school(val) {
             school = val;

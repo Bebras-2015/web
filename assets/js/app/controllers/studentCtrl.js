@@ -5,34 +5,6 @@ myApp.controller('studentCtrl', [
         $scope.student = studentsService;
         $scope.stats = statsService;
 
-        $scope.chartObject = {};
-        $scope.chartObject.type = "Gauge";
-
-        $scope.chartObject.options = {
-            width: 400,
-            height: 120,
-            redFrom: 90,
-            redTo: 100,
-            yellowFrom: 75,
-            yellowTo: 90,
-            minorTicks: 5
-        };
-
-        $scope.chartObject.data = [
-            ['Label', 'Value'],
-            ['Memory', 80],
-            ['CPU', 55],
-            ['Network', 68]
-        ];
-
-        $scope.onClick = function (points, evt) {
-            console.log(points, evt);
-        };
-
-        $scope.onClick = function (points, evt) {
-            console.log(points, evt);
-        };
-
         // Get student
         studentRes.fetch({id:$routeParams.id}).$promise.then(
             function (data) {
@@ -69,7 +41,27 @@ myApp.controller('studentCtrl', [
                 {
                     school: $scope.stats.stats.grader,
                     grader: $scope.stats.stats.school
-                }
+                };
+
+                $scope.chartObject = {};
+                $scope.chartObject.type = "Gauge";
+
+                $scope.chartObject.options = {
+                    width: 400,
+                    height: 120,
+                    redFrom: 90,
+                    redTo: 100,
+                    yellowFrom: 75,
+                    yellowTo: 90,
+                    minorTicks: 5
+                };
+
+                $scope.chartObject.data = [
+                    ['Label', 'Value'],
+                    ['Memory', $scope.stats.school],
+                    ['CPU', $scope.stats.grader]
+                ];
+
             },
             function (error) {
                 console.log(error.status, error.statusText);
