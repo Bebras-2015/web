@@ -4,6 +4,7 @@ html {
 }
 
 .home-body {
+    position: absolute;
     height: 100%;
     width: 100%;
     padding-top: 0;
@@ -20,6 +21,7 @@ h6 {
 }
 
 .home .div {
+    float : none;
     display: inline-block;
     width: 40%;
     height: 5px;
