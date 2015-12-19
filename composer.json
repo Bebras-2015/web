@@ -1,0 +1,10 @@
+{
+    "name": "bebras/web",
+    "type": "project",
+    "require-dev": {
+        "andres-montanez/magallanes": "1.0.*"
+    },
+    "config": {
+        "bin-dir": "bin"
+    }
+}

@@ -1,0 +1,8 @@
+# global settings
+name: Bebras
+email: tadcka89@gmail.com
+notifications: true
+logging: true
+maxlogs: 30
+ssh_needs_tty: false
+composer_cmd: composer

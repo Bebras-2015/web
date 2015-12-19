@@ -1,0 +1,21 @@
+deployment:
+    strategy: rsync
+    user: user
+    from: ./
+    to: /var/www/clients/client7/web11/web/web
+    excludes:
+        - .idea
+        - .git
+        - app/nginx
+releases:
+    enabled: true
+    max: 3
+    symlink: current
+    directory: releases
+hosts:
+      - localhost
+tasks:
+    pre-deploy:
+    on-deploy:
+    post-release:
+    post-deploy:
