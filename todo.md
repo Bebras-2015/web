@@ -13,10 +13,10 @@
 ### Pages
 - [x] Apie bebra
 - [x] Apie NFQ
-- [ ] Komanda
+- [x] Komanda
 
 ### Design elements
-- [ ] Logo
-- [ ] Meniu
-- [ ] Footer
-- [ ] Landing (titulinis)
+- [x] Logo
+- [x] Meniu
+- [x] Footer
+- [x] Landing (titulinis)
