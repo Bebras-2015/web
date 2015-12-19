@@ -1,4 +1,3 @@
-#foxshop-beta
 deployment:
     strategy: rsync
     user: user

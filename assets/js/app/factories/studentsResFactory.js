@@ -1,7 +1,7 @@
 myApp.factory(
     'studentsRes', [
         '$resource', function ($resource) {
-            return $resource('assets/js/app/data/students.json', {}, {
+            return $resource('http://api-bebras.tadcka.lt/students.json', {}, {
                 fetch: {
                     method: 'get',
                     isArray: true,
