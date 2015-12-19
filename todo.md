@@ -18,5 +18,5 @@
 ### Design elements
 - [x] Logo
 - [x] Meniu
-- [x] Footer
+- [b] Footer
 - [x] Landing (titulinis)
