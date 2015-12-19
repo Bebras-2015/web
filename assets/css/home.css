@@ -19,7 +19,9 @@ h5,
 h6 {
     margin: 0;
 }
-
+.home {
+    margin-top:50px;
+}
 .home .div {
     float : none;
     display: inline-block;

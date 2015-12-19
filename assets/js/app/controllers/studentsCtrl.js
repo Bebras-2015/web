@@ -2,7 +2,7 @@ myApp.controller('studentsCtrl', [
     '$scope', 'studentsService', 'studentsRes', 'lodash', '$rootScope',
     function ($scope, studentsService, studentsRes, lodash, $rootScope) {
 
-        $rootScope.page = 'result';
+        $rootScope.page = 'results';
         $scope.student = studentsService;
         // Get Users
         studentsRes.fetch().$promise.then(
@@ -15,7 +15,7 @@ myApp.controller('studentsCtrl', [
                     // Prepare name
                     $scope.student.name = value.full_name;
                     $scope.student.school = value.school;
-                    $scope.student.grader = value.grader;
+                    $scope.student.grade = value.grade;
                     $scope.student.score = value.score;
 
                     $scope.student.list.push(
@@ -23,7 +23,7 @@ myApp.controller('studentsCtrl', [
                             id: value.id,
                             name: $scope.student.name,
                             school: $scope.student.school,
-                            grader: $scope.student.grader,
+                            grade: $scope.student.grade,
                             score: $scope.student.score
                         }
                     );

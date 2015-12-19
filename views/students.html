@@ -8,18 +8,30 @@
 <input type="text" ng-model="search.$" ng-model-options="{ debounce: 150 }" placeholder="Ieskoti...">
 
 <div class="table-responsive">
-    <table class="table table-striped">
+    <table class="table table-striped" ng-init="sortType = 'score';sortReverse=true">
         <thead>
             <tr>
-                <th>Klasė</th>
-                <th>Vardas Pavardė</th>
-                <th>Mokykla</th>
-                <th>Taškai</th>
+                <th ng-click="sortType = 'grader';sortReverse=!sortReverse" class="results-header">
+                    Klasė
+                    <i ng-if="sortType == 'grader'" class="glyphicon glyphicon-sort-by-attributes{{sortReverse?'-alt':''}}"></i>
+                </th>
+                <th ng-click="sortType = 'name';sortReverse=!sortReverse" class="results-header">
+                    Vardas Pavardė
+                    <i ng-if="sortType == 'name'" class="glyphicon glyphicon-sort-by-attributes{{sortReverse?'-alt':''}}"></i>
+                </th>
+                <th ng-click="sortType = 'school';sortReverse=!sortReverse" class="results-header">
+                    Mokykla
+                    <i ng-if="sortType == 'school'" class="glyphicon glyphicon-sort-by-attributes{{sortReverse?'-alt':''}}"></i>
+                </th>
+                <th ng-click="sortType = 'score';sortReverse=!sortReverse" class="results-header">
+                    Taškai
+                    <i ng-if="sortType == 'score'" class="glyphicon glyphicon-sort-by-attributes{{sortReverse?'-alt':''}}"></i>
+                </th>
             </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="student in total = (student.list | filter:search)">
-                <td>{{total.length}}{{ student.grader }}</td>
+            <tr ng-repeat="student in total = (student.list | filter:search  | orderBy:sortType:sortReverse)">
+                <td>{{ student.grade }}</td>
                 <td><a ng-href="/student/{{ student.id }}">{{ student.name }}</a></td>
                 <td>{{ student.school }}</td>
                 <td class="score">{{ student.score }}</td>

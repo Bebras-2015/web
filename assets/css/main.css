@@ -75,6 +75,12 @@ thead {
 thead th {
   border-right: 2px solid white;
 }
+thead th.results-header {
+    white-space: nowrap;
+    width: 1%;
+    cursor: pointer;
+ }
+
 thead th:last-child {
   border-right: none;
 }
@@ -91,4 +97,12 @@ thead th:last-child {
   margin-top: 25px;
   width: 100%;
   height: auto;
+}
+
+.footer {
+    height: 60px;
+    background-color: #A70522;
+    color: white;
+    margin-top: 150px;
+    padding-top: 20px;
 }

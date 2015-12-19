@@ -2,21 +2,21 @@ myApp.service('statsService', [function () {
     var grader, school;
     this.stats = {
 
-        grader: 0,
+        grade: 0,
         school: 0,
 
         data: [],
         // Set Get grader stats
-        get grader() {
-            return grader;
+        get grade() {
+            return parseFloat(grade.toFixed(0));
         },
-        set grader(val) {
-            grader = val;
+        set grade(val) {
+            grade = val;
         },
 
         // Set get school stats
         get school() {
-            return school;
+            return parseFloat(school.toFixed(0));
         },
         set school(val) {
             school = val;

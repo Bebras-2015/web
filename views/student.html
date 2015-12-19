@@ -1,31 +1,19 @@
 <h1 class="title">
     <span class="pull-left animated infinite pulse">
-        {{ student.name }}
+        {{ student.name }} <span>{{ student.score }}</span>
     </span>
 </h1>
 <div class="div"></div>
 
-<div class="text-content" google-chart chart="chartObject" style="height:170px; width:100%;"></div>
-
-<div class="table-responsive">
-
-
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>Klasė</th>
-                <th>Vardas Pavardė</th>
-                <th>Mokykla</th>
-                <th>Taškai</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>{{ student.grader }}</td>
-                <td>{{ student.name }}</td>
-                <td>{{ student.school }}</td>
-                <td>{{ student.score }}</td>
-            </tr>
-        </tbody>
-    </table>
+<div class="text-content ">
+    <div class="pull-right text-center hidden-xs">
+        <h3 class="title">Statistika tarp:</h3>
+        <div class="text-center" google-chart chart="chartObject"></div>
+    </div>
+    <address>
+        <strong>{{ student.name }}</strong><br>
+        {{ student.school }}<br>
+        Klasė: {{ student.grade }}<br>
+        <abbr title="Informatikos ir informatinio mąstymo konkurso „Bebras“ rezultatas">Taškai:</abbr> {{ student.score }}
+    </address>
 </div>

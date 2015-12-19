@@ -1,7 +1,7 @@
 myApp.controller('studentCtrl', [
     '$scope', 'studentsService', 'studentRes', 'lodash', '$routeParams', '$rootScope', 'statsResFactory', 'statsService',
     function ($scope, studentsService, studentRes, lodash, $routeParams, $rootScope, statsResFactory, statsService) {
-        $rootScope.page = 'student';
+        $rootScope.page = 'results';
         $scope.student = studentsService;
         $scope.stats = statsService;
 
@@ -11,7 +11,7 @@ myApp.controller('studentCtrl', [
                 // Prepare name
                 $scope.student.name = data.full_name;
                 $scope.student.school = data.school;
-                $scope.student.grader = data.grader;
+                $scope.student.grade = data.grade;
                 $scope.student.score = data.score;
 
                 $scope.student =
@@ -19,7 +19,7 @@ myApp.controller('studentCtrl', [
                     id: data.id,
                     name: $scope.student.name,
                     school: $scope.student.school,
-                    grader: $scope.student.grader,
+                    grade: $scope.student.grade,
                     score: $scope.student.score
                 };
             },
@@ -32,15 +32,14 @@ myApp.controller('studentCtrl', [
         statsResFactory.fetch({id:$routeParams.id}).$promise.then(
             function (data) {
 
-                console.log(data);
                 // Prepare name
-                $scope.stats.stats.grader = data.by_grader;
-                $scope.stats.stats.school = data.by_school;
+                $scope.stats.stats.grade = data.by_grade;
+                $scope.stats.stats.school = data.by_all;
 
                 $scope.stats =
                 {
-                    school: $scope.stats.stats.grader,
-                    grader: $scope.stats.stats.school
+                    school: $scope.stats.stats.grade,
+                    grade: $scope.stats.stats.school
                 };
 
                 $scope.chartObject = {};
@@ -58,8 +57,9 @@ myApp.controller('studentCtrl', [
 
                 $scope.chartObject.data = [
                     ['Label', 'Value'],
-                    ['Memory', $scope.stats.school],
-                    ['CPU', $scope.stats.grader]
+                    ['Visų', $scope.stats.school],
+                    ['Klasiokų', $scope.stats.grade],
+                    ['Kiečiausių', parseFloat(($scope.stats.school + $scope.stats.grade) / 2).toFixed(0)]
                 ];
 
             },

@@ -1,5 +1,5 @@
 myApp.service('studentsService', [function () {
-    var name, grader, school, score;
+    var name, grade, school, score;
     this.student = {
 
         list: [],
@@ -8,15 +8,15 @@ myApp.service('studentsService', [function () {
             return name;
         },
         set name(val) {
-            name = '✍ ' + val;
+            name = val;
         },
 
         // Set get grader
-        get grader() {
-            return grader;
+        get grade() {
+            return grade;
         },
-        set grader(val) {
-            grader = '★ ' + val;
+        set grade(val) {
+            grade = val;
         },
 
         // Set get school
@@ -24,7 +24,7 @@ myApp.service('studentsService', [function () {
             return school;
         },
         set school(val) {
-            school = val ? '⛺ ' + val : '---';
+            school = val ?                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      val : '---';
         },
 
         // Set get score
@@ -64,7 +64,7 @@ myApp.service('studentsService', [function () {
                     score = '➓';
                     break;
                 default:
-                    score = '★ ' + val;
+                    score = val;
                     break;
             }
 
